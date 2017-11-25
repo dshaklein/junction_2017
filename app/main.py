@@ -1,13 +1,15 @@
+import os
 from flask import Flask
 from flask import render_template
+from flask.ext.sqlalchemy import SQLAlchemy
+from app import create_app, db
 
-app = Flask(__name__)
+app = create_app()
 
 
 @app.route('/')
 def index():
     return render_template('movies.html')
-
 
 
 @app.route('/search/', methods=['POST'])
