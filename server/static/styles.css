@@ -42,7 +42,7 @@ body .base {
 
 .base .content {
   max-width: 900px;
-  padding: 0;
+  padding: 40px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
