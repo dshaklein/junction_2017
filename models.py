@@ -26,3 +26,4 @@ class Movie:
         else:
             res = []
         print(self.title, res)
+        print(self.title, res)

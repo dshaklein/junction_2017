@@ -16,11 +16,11 @@ def get_reviews_from_imdb(mov_id, max_res):
 
 def get_movies():
 
-    imdb_movies = imdb.popular_movies()[:10]
+    imdb_movies = imdb.top_250()[:20]
     movies = []
     for mov in imdb_movies:
         # for popular
-        mov = mov['object']
+        # mov = mov['object']
         # for top 250
         movie = Movie(mov['tconst'])
 
