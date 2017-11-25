@@ -5,8 +5,9 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():
-    return render_template('index.html', )
+def hello_world():
+    return render_template('movies.html')
+
 
 
 @app.route('/search/', methods=['POST'])
