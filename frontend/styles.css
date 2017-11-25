@@ -59,7 +59,7 @@ body .base {
 }
 
 .base.mdl-layout .mdl-layout__content {
-  padding-top: 230px;
+  padding-top: 130px;
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
