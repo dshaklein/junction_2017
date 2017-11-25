@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', )
+    return render_template('movies.html')
+
 
 
 @app.route('/search/', methods=['POST'])
@@ -15,7 +16,6 @@ def search():
 
     return render_template('search.html')
 
-@app.route('')
 
 if __name__ == '__main__':
     app.run()
