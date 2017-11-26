@@ -52,6 +52,11 @@ def get_movie(movie_id):
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+
+@app.route('/movies')
+def movies():
     db_movies = mongo.db.movies
     movies = db_movies.find()
     res = []
@@ -66,7 +71,7 @@ def index():
 def search():
     if request.method == 'GET':
         data = request.args['string']
-        emojis = set(data.split(';'))
+        emojis = set(data.split(','))
         db_movies = mongo.db.movies
         movies = db_movies.find()
         most_common = dict()
@@ -84,7 +89,7 @@ def search():
             mov = fill_movie_obj(db_m)
             res_movies.append(mov)
         print(res)
-    return render_template('movies.html', movies=res_movies)
+        return render_template('search.html', movies=res_movies)
 
 
 if __name__ == '__main__':

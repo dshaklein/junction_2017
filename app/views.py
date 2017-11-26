@@ -3,13 +3,13 @@ import the_model
 
 
 emojies_mapping = {
-    'dynamic': '1',
-    'intellectual': '2',
-    'romantic': '3',
+    'dynamic': '5',
+    'intellectual': '6',
+    'romantic': '2',
     'mystical': '4',
-    'sad': '5',
-    'funny': '6',
-    'teen': '7',
+    'sad': '1',
+    'funny': '0',
+    'teen': '3',
 }
 
 coefs = {

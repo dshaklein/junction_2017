@@ -89,7 +89,6 @@ body .base {
 
 }
 
->>>>>>> origin/front_new:app/static/styles.css
 .base.mdl-layout .mdl-layout__content {
   padding-top: 16px;
   position: relative;
@@ -262,9 +261,7 @@ body .base {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.base .on-the-road-again .mdl-card__media {
-  /*background-image: url('images/road.jpg');*/
-}
+
 .base .shopping .mdl-card__media {
   background-image: url('images/shopping.jpg');
 }
