@@ -41,7 +41,7 @@
             {% for movie in movies %}
             <div class="mdl-card mdl-cell mdl-cell--3-col">
                 <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('{{ movie.url }}');">
-                    <h3><a href="/movie/{{ movie.id }}">{{ movie.title }}</a></h3>
+                    <h5><a href="/movie/{{ movie.id }}">{{ movie.title }}</a></h5>
                 </div>
                 <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                     <!--<div class="minilogo"></div>-->
