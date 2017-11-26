@@ -42,7 +42,7 @@ body .base {
 
 .base .content {
   max-width: 900px;
-  padding: 40px;
+  padding: 30px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -63,8 +63,35 @@ body .base {
      line-height: 2rem;
 }
 
+.emoji-card {
+    min-height: 150px !important;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.emoji-card-focus {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.emoji {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+
+.search-button-wrapper {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-button {
+
+}
+
+>>>>>>> origin/front_new:app/static/styles.css
 .base.mdl-layout .mdl-layout__content {
-  padding-top: 130px;
+  padding-top: 16px;
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
@@ -196,6 +223,7 @@ body .base {
 .base .movie-pic .mdl-card__media {
   background-position: top;
 }
+
 
 .base .something-else .mdl-card__media {
   display: -webkit-flex;
