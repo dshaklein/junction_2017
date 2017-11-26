@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Emotive — best movie for tonight</title>
+    <title>Emotive — a movie for tonight</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -30,26 +30,34 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.pink-blue.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
 <div class="base mdl-layout mdl-js-layout has-drawer is-upgraded">
     <main class="mdl-layout__content">
         <h1 class="header">Emotive</h1>
-        <div class="header description">Discover your movie for today depending on your mood.<br>
-            To start, just enter a couple of emojies below, which mostly represent your mood at the moment.</div>
+        <div class="header description">Tonight's movie will match your mood perfectly.<br>
+            Just choose a couple of emojies below, which represent your mood at the moment.</div>
         <div class="content mdl-grid emoji-grid">
-
-            <nav class="demo-nav mdl-cell mdl-cell--12-col">
-                <div class="section-spacer"></div>
-                <a href="movie.html" class="demo-nav__button" title="show more">
-                    More
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                        <i class="material-icons" role="presentation">arrow_forward</i>
-                    </button>
-                </a>
-            </nav>
+            <div class="mdl-card mdl-cell mdl-cell--3-col emoji-card emoji-card:focus" id="0"><img src="/static/images/emoji/funny.png" class="emoji"></div>
+            <div class="mdl-card mdl-cell mdl-cell--3-col emoji-card emoji-card:focus" id="1"><img src="/static/images/emoji/sad.png" class="emoji"></div>
+            <div class="mdl-card mdl-cell mdl-cell--3-col emoji-card emoji-card:focus" id="2"><img src="/static/images/emoji/love.png" class="emoji"></div>
+            <div class="mdl-card mdl-cell mdl-cell--3-col emoji-card emoji-card:focus" id="3"><img src="/static/images/emoji/teen.png" class="emoji"></div>
+            <div class="mdl-card mdl-cell mdl-cell--3-col emoji-card emoji-card:focus" id="4"><img src="/static/images/emoji/mystic.png" class="emoji"></div>
+            <div class="mdl-card mdl-cell mdl-cell--3-col emoji-card emoji-card:focus" id="5"><img src="/static/images/emoji/cool.png" class="emoji"></div>
+            <div class="mdl-card mdl-cell mdl-cell--3-col emoji-card emoji-card:focus" id="6"><img src="/static/images/emoji/intellectual.png" class="emoji"></div>
+            <div class="mdl-card mdl-cell mdl-cell--3-col emoji-card emoji-card:focus" id="7"><img src="/static/images/emoji/inspiring.png" class="emoji"></div>
+            <div class="search-button-wrapper"><button class="mdl-button mdl-js-button mdl-button--accent" id="post-button">Emotionize</button></div>
+            <!--<nav class="demo-nav mdl-cell mdl-cell&#45;&#45;12-col">-->
+                <!--<div class="section-spacer"></div>-->
+                <!--<a href="movie.html" class="demo-nav__button" title="show more">-->
+                    <!--More-->
+                    <!--<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button&#45;&#45;icon">-->
+                        <!--<i class="material-icons" role="presentation">arrow_forward</i>-->
+                    <!--</button>-->
+                <!--</a>-->
+            <!--</nav>-->
         </div>
 
 <footer class="mdl-mega-footer">
@@ -78,20 +86,8 @@
 <div class="mdl-layout__obfuscator"></div>
 </div>
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/static/scripts/main.js"></script>
 </body>
-<script>
-    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-        var link = el.querySelector('a');
-        if(!link) {
-            return;
-        }
-        var target = link.getAttribute('href');
-        if(!target) {
-            return;
-        }
-        el.addEventListener('click', function() {
-            location.href = target;
-        });
-    });
-</script>
 </html>
