@@ -42,11 +42,14 @@ body .base {
 
 .base .content {
   max-width: 900px;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: auto;
   margin: 0 auto;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
@@ -59,6 +62,8 @@ body .base {
 }
 
 .description {
+    padding-left: auto;
+    padding-right: auto;
     font-size: 1.5rem;
      line-height: 2rem;
 }
@@ -80,13 +85,15 @@ body .base {
 }
 
 .search-button-wrapper {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
 }
 
 .search-button {
-
+    color: rgb(255, 138, 164);
+    font-size: 1.5em;
+    height: 50px;
+    width: 150px;
 }
 
 .base.mdl-layout .mdl-layout__content {
