@@ -34,7 +34,7 @@ def fill():
                    'title': m.title,
                    'url': m.data['image']['url'],
                    'emojis': emojis,
-                   'rating': m.data['rating'],
+                   'rating': m.data.get('rating', 0),
                    'year': m.data['year']})
 
     return 'ok'
@@ -83,6 +83,7 @@ def search():
         res = sorted(list(most_common.items()),
                      key=lambda x: x[1],
                      reverse=True)
+        res = [r for r in res if r[1] >= 1][:20]
         res_movies = []
         for m in res:
             db_m = mongo.db.movies.find_one({'title': m[0]})

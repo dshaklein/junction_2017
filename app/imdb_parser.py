@@ -20,7 +20,7 @@ def get_reviews_from_imdb(mov_id, max_res):
 
 def get_movies():
 
-    imdb_movies = imdb.top_250()[:20]
+    imdb_movies = imdb.top_250()[70:]
     movies = []
     for mov in imdb_movies:
         # for popular

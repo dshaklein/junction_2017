@@ -1,25 +1,28 @@
 from collections import defaultdict
 import the_model
+from ml.Classifier_ml import text_to_emojis
 
 
 emojies_mapping = {
     'dynamic': '5',
     'intellectual': '6',
-    'romantic': '2',
+    'sentimental': '2',
     'mystical': '4',
     'sad': '1',
     'funny': '0',
     'teen': '3',
+    'inspiring': '7'
 }
 
 coefs = {
     'dynamic': 1,
     'intellectual': 1.2,
-    'romantic': 0.9,
+    'sentimental': 0.9,
     'mystical': 1,
     'sad': 0.7,
     'funny': 1,
     'teen': 0.65,
+    'inspiring': 1,
 }
 
 
@@ -58,11 +61,12 @@ class Movie:
 
     def calc_emojis(self):
         if self.reviews:
-            em_freq = the_model.text_to_emoji(self.reviews)
+            # em_freq = the_model.text_to_emoji(self.reviews)
+            em_freq = text_to_emojis(self.reviews)
             frq = self.calc_proc(em_freq)
             em, old = self.filter_freq(frq)
         else:
             self.emojis = []
-            em = []
+            em, old = [], []
 
         print(self.title, old, em)
