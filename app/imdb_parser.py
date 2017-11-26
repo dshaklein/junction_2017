@@ -1,6 +1,8 @@
 from imdbpie import Imdb
 
-from app.models import Movie
+from views import Movie
+from main import mongo
+
 
 imdb = Imdb()
 
@@ -24,7 +26,9 @@ def get_movies():
         # for popular
         # mov = mov['object']
         # for top 250
-        movie = Movie(mov['tconst'])
+
+        movie = Movie(mov['tconst'], mov)
+        more_info = imdb.get_title_by_id(mov['tconst'])
 
         movie.title = mov['title']
         movie.reviews = get_reviews_from_imdb(movie.index, 1000)
@@ -34,4 +38,11 @@ def get_movies():
 
 
 if __name__ == '__main__':
+    db = mongo.db.movies
     ms = get_movies()
+    for m in ms:
+        emojis = ';'.join(m.emojis)
+        db.insert({'id': m.index,
+                   'title': m.title,
+                   'url': m.data['image']['url'],
+                   'emojis': emojis})

@@ -38,66 +38,11 @@
     <main class="mdl-layout__content">
         <h1 class="header">Emotive</h1>
         <div class="content mdl-grid">
-            <div class="mdl-card mdl-cell mdl-cell--3-col">
-                <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('http://img.moviepostershop.com/inception-movie-poster-2010-1010547301.jpg');">
-                    <h3><a href="movie.html">Movie 1</a></h3>
-                </div>
-                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                    <!--<div class="minilogo"></div>-->
-                    <div>
-                        <strong>IMDB rating:</strong>
-                    </div>
-                </div>
-            </div>
-                        <div class="mdl-card mdl-cell mdl-cell--3-col">
-                <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('http://img.moviepostershop.com/inception-movie-poster-2010-1010547301.jpg');">
-                    <h3><a href="movie.html">Movie 1</a></h3>
-                </div>
-                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                    <!--<div class="minilogo"></div>-->
-                    <div>
-                        <strong>IMDB rating:</strong>
-                    </div>
-                </div>
-            </div>
-                        <div class="mdl-card mdl-cell mdl-cell--3-col">
-                <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('http://img.moviepostershop.com/inception-movie-poster-2010-1010547301.jpg');">
-                    <h3><a href="movie.html">Movie 1</a></h3>
-                </div>
-                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                    <!--<div class="minilogo"></div>-->
-                    <div>
-                        <strong>IMDB rating:</strong>
-                    </div>
-                </div>
-            </div>
-                        <div class="mdl-card mdl-cell mdl-cell--3-col">
-                <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('http://img.moviepostershop.com/inception-movie-poster-2010-1010547301.jpg');">
-                    <h3><a href="movie.html">Movie 1</a></h3>
-                </div>
-                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                    <!--<div class="minilogo"></div>-->
-                    <div>
-                        <strong>IMDB rating: 8.9/10</strong>
-                    </div>
-                </div>
-            </div>
-                        <div class="mdl-card mdl-cell mdl-cell--3-col">
-                <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('http://img.moviepostershop.com/inception-movie-poster-2010-1010547301.jpg');">
-                    <h3><a href="movie.html">Movie 1</a></h3>
-                </div>
-                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                    <!--<div class="minilogo"></div>-->
-                    <div>
-                        <strong>IMDB rating:</strong>
-                    </div>
-                </div>
-            </div>
 
             {% for movie in movies %}
             <div class="mdl-card mdl-cell mdl-cell--3-col">
-                <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('{{ movie.img }}');">
-                    <h3><a href="{{ movie.page_url }}">{{ movie.title }}</a></h3>
+                <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('{{ movie.url }}');">
+                    <h3><a href="/movie/{{ movie.id }}">{{ movie.title }}</a></h3>
                 </div>
                 <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                     <!--<div class="minilogo"></div>-->
